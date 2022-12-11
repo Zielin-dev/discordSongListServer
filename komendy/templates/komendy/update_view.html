@@ -1,0 +1,11 @@
+{% extends 'komendy/base.html' %} {% block content %}
+<div>
+    <form method="post">{% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="Łot?" class="btn btn-success">
+        <a class="btn btn-danger" href="{% url 'komenda_delete' pk %}">Delete</a>
+
+    </form>
+    <a class="btn btn-dark" href="{% url 'home' %}">Klikam b i wracam</a>
+
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'komendy/base.html' %} {% block content %}
+<div>
+    <form method="post">{% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="Dodaj Komende">
+    </form>
+</div>
+{% endblock %}

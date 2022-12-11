@@ -1,0 +1,66 @@
+body {
+    color: white;
+    background-color: #424549;
+}
+
+#container {
+    min-height: 100vh;
+    margin-left: 10vw;
+    padding: 5vw;
+    max-width: 70vw;
+    margin-right: 10vw;
+}
+
+#content {
+    min-width: 70vw;
+    min-height: 80vh;
+}
+
+#navbar {
+    min-height: 10vh;
+}
+
+#footer {
+    min-height: 10vh;
+}
+
+.komendaCon {
+    color: white;
+}
+
+.komenda {
+    margin-left: 2.5vw;
+    display: inline-block;
+    width: 30vw;
+    background-color: #36393e;
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.kolko {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: hidden;
+    border-radius: 50px;
+}
+
+body {
+    max-width: 100vw;
+    display: inline-block;
+}
+
+.command {
+    color: #7289da;
+    font-weight: normal;
+}
+
+.btn {
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 5px;
+}

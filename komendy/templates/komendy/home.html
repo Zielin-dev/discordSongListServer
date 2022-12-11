@@ -1,0 +1,55 @@
+{% extends 'komendy/base.html' %} {% block content %} {% if user.is_authenticated %}
+<a class="btn btn-dark" href="{% url 'logout'%}">Wyloguj się</a>
+
+<a class="btn btn-dark" href="{% url 'komenda_create' %}">Dodaj Komende</a> |
+<div class="komendaCon">
+    {% for i in list %}
+
+
+    <ul class="komenda">
+        <li>
+            <h1>{{i.name}}</h1>
+        </li>
+
+        <li>
+            <h2 class="command">/{{i.command}}</h2>
+        </li>
+        <li>
+            <iframe width="420" height="315" src={{i.link}}>
+</iframe>
+        </li>
+        <li>
+            <p>głośność: {{i.volume}}</p>
+        </li>
+        <li>
+            <p>autor: {{i.author}}</p>
+        </li>
+        <li>
+            <a class="btn btn-dark" href="{% url 'komenda_update' i.pk %}">Update</a
+      ><a class="btn btn-dark" href="{% url 'komenda_delete' i.pk %}"
+        >Delete</a
+      >
+    </li>
+  </ul>
+
+
+{% endfor %} 
+
+{% else %}
+<a class="btn btn-dark" href="{% url 'login'%}">Zaloguj się</a>
+            <div class="komendaCon"></div>{% for i in list %} {% if i.active %}
+            <ul class="komenda">
+                <li>
+                    <h1>{{i.name}}</h1>
+                </li>
+                <li>
+                    <h2 class="command">/{{i.command}}</h2>
+                </li>
+                <li>
+                    <iframe width="420" height="315" src={{i.link}}>
+                        </iframe>
+                </li>
+            </ul>
+            {% endif %} {% endfor %} {% endif %} {% endblock %}
+</div>
+</div>
